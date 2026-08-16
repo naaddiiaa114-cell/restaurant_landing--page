@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hearth & Table — Cozy Dining</title>
+<meta name="description" content="Hearth & Table — a warm, welcoming neighborhood restaurant. Fresh seasonal food, cozy atmosphere.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#home" class="logo">
+      <i class="fa-solid fa-fire logo__icon"></i>
+      <span>Hearth <em>&amp; Table</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#reserve" class="btn btn--primary nav-cta">Book a Table</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero__bg">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80" alt="Warm cozy restaurant table with food">
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="container hero__content">
+    <p class="eyebrow">Welcome to Hearth &amp; Table</p>
+    <h1>Good food, warm company.</h1>
+    <p class="hero__sub">A neighborhood restaurant serving fresh, seasonal dishes in a cozy, come-as-you-are kind of place.</p>
+    <div class="hero__actions">
+      <a href="#menu" class="btn btn--primary">Explore Menu</a>
+      <a href="#reserve" class="btn btn--outline">Book a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container about__grid">
+    <div class="about__media reveal">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Chef preparing food in the kitchen">
+    </div>
+    <div class="about__content reveal">
+      <p class="eyebrow">Our Story</p>
+      <h2>Food that feels like home.</h2>
+      <p>Hearth & Table opened its doors with one simple goal — cook honest food, using what's fresh, and serve it in a place where you actually want to linger.</p>
+      <a href="#menu" class="btn btn--outline">Discover More</a>
+
+      <div class="stats">
+        <div class="stat"><span class="stat__num" data-count="10">0</span>+<small>Years Experience</small></div>
+        <div class="stat"><span class="stat__num" data-count="50">0</span>+<small>Dishes</small></div>
+        <div class="stat"><span class="stat__num" data-count="20">0</span>+<small>Chefs</small></div>
+        <div class="stat"><span class="stat__num" data-count="10">0</span>K+<small>Happy Guests</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED MENU ===== -->
+<section class="section section--tinted" id="menu">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">Our Menu</p>
+      <h2>Featured Dishes</h2>
+    </div>
+
+    <div class="menu-filter reveal" id="menuFilter">
+      <button class="filter-btn active" data-filter="all">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=100&q=80" alt="All dishes"> All
+      </button>
+      <button class="filter-btn" data-filter="breakfast">
+        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=100&q=80" alt="Breakfast"> Breakfast
+      </button>
+      <button class="filter-btn" data-filter="lunch">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=100&q=80" alt="Lunch"> Lunch
+      </button>
+      <button class="filter-btn" data-filter="dinner">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=100&q=80" alt="Dinner"> Dinner
+      </button>
+      <button class="filter-btn" data-filter="fastfood">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=100&q=80" alt="Fast Food"> Fast Food
+      </button>
+      <button class="filter-btn" data-filter="desserts">
+        <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=100&q=80" alt="Desserts"> Desserts
+      </button>
+    </div>
+
+    <div class="menu-grid" id="menuList"></div>
+  </div>
+</section>
+
+<!-- ===== SPECIAL OFFER ===== -->
+<section class="offer">
+  <div class="container offer__content reveal">
+    <p class="eyebrow eyebrow--light">Limited Time</p>
+    <h2>20% Off — Weekend Special</h2>
+    <p>Book Friday through Sunday and save 20% on our chef's tasting menu.</p>
+    <div class="countdown" id="countdown">
+      <div class="countdown__unit"><span id="cd-days">00</span><small>Days</small></div>
+      <div class="countdown__unit"><span id="cd-hours">00</span><small>Hours</small></div>
+      <div class="countdown__unit"><span id="cd-mins">00</span><small>Mins</small></div>
+      <div class="countdown__unit"><span id="cd-secs">00</span><small>Secs</small></div>
+    </div>
+    <a href="#reserve" class="btn btn--primary">Order Now</a>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">How To Dine</p>
+      <h2>Our Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><i class="fa-solid fa-utensils"></i><h3>Dine-In</h3><p>A warm dining room, open kitchen, and a menu that changes with the seasons.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-bag-shopping"></i><h3>Online Ordering</h3><p>Order ahead and pick up your favorites, packed fresh and ready to go.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-motorcycle"></i><h3>Home Delivery</h3><p>Fast, careful delivery within 5km — hot food, on time, every time.</p></div>
+      <div class="service-card reveal"><i class="fa-solid fa-champagne-glasses"></i><h3>Event Catering</h3><p>Let us handle the food for your next gathering, big or small.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section section--tinted" id="gallery">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">A Look Inside</p>
+      <h2>Gallery</h2>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <img src="" alt="" id="lightboxImg">
+  <button class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">Guest Reviews</p>
+      <h2>What They're Saying</h2>
+    </div>
+    <div class="testimonial-slider reveal" id="testimonialSlider">
+      <i class="fa-solid fa-quote-left"></i>
+      <div class="testimonial-slider__track" id="testimonialTrack"></div>
+      <div class="testimonial-slider__dots" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESERVATION CTA ===== -->
+<section class="reserve-cta" id="reserve">
+  <div class="container reveal">
+    <p class="eyebrow eyebrow--light">Reservations</p>
+    <h2>Let's set your table.</h2>
+    <p>We recommend booking 48 hours ahead on weekends.</p>
+    <button class="btn btn--primary" id="openReservation">Reserve Your Table</button>
+  </div>
+</section>
+
+<div class="modal-overlay" id="reservationModal">
+  <div class="modal">
+    <button class="modal__close" id="closeReservation" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <h3>Reserve Your Table</h3>
+    <form id="reservationForm" novalidate>
+      <div class="form-row">
+        <div class="form-field"><label for="resName">Full Name</label><input type="text" id="resName"><span class="form-error" data-error="resName"></span></div>
+        <div class="form-field"><label for="resEmail">Email</label><input type="email" id="resEmail"><span class="form-error" data-error="resEmail"></span></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label for="resPhone">Phone</label><input type="tel" id="resPhone"><span class="form-error" data-error="resPhone"></span></div>
+        <div class="form-field"><label for="resGuests">Guests</label><input type="number" id="resGuests" min="1" max="12"><span class="form-error" data-error="resGuests"></span></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label for="resDate">Date</label><input type="date" id="resDate"><span class="form-error" data-error="resDate"></span></div>
+        <div class="form-field"><label for="resTime">Time</label><input type="time" id="resTime"><span class="form-error" data-error="resTime"></span></div>
+      </div>
+      <div class="form-field"><label for="resRequest">Special Request</label><textarea id="resRequest" rows="3"></textarea></div>
+      <button type="submit" class="btn btn--primary btn--block">Confirm Reservation</button>
+    </form>
+    <div class="modal__success" id="reservationSuccess">
+      <i class="fa-solid fa-circle-check"></i>
+      <h3>Table Reserved!</h3>
+      <p>Thank you — we look forward to hosting you.</p>
+      <button class="btn btn--outline" id="closeSuccess">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section class="section section--tinted" id="contact">
+  <div class="container contact__grid">
+    <div class="contact__info reveal">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Get In Touch</h2>
+      <ul class="contact__list">
+        <li><i class="fa-solid fa-location-dot"></i><div><strong>Address</strong><span>22 Maple Street, Downtown</span></div></li>
+        <li><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><span>+1 (555) 019-2244</span></div></li>
+        <li><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>hello@hearthandtable.com</span></div></li>
+        <li><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><span>Daily, 11AM – 10PM</span></div></li>
+      </ul>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <form class="contact__form reveal" id="contactForm" novalidate>
+      <div class="form-field"><label for="cName">Name</label><input type="text" id="cName"><span class="form-error" data-error="cName"></span></div>
+      <div class="form-field"><label for="cEmail">Email</label><input type="email" id="cEmail"><span class="form-error" data-error="cEmail"></span></div>
+      <div class="form-field"><label for="cMessage">Message</label><textarea id="cMessage" rows="4"></textarea><span class="form-error" data-error="cMessage"></span></div>
+      <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+      <p class="form-note" id="contactNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#home" class="logo"><i class="fa-solid fa-fire logo__icon"></i><span>Hearth <em>&amp; Table</em></span></a>
+      <p>A warm neighborhood restaurant serving fresh, seasonal food since day one.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <a href="tel:+15550192244"><i class="fa-solid fa-phone"></i> +1 (555) 019-2244</a>
+      <a href="mailto:hello@hearthandtable.com"><i class="fa-solid fa-envelope"></i> hello@hearthandtable.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom"><p>&copy; <span id="year"></span> Hearth &amp; Table. All rights reserved.</p></div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
